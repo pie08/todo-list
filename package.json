@@ -1,0 +1,14 @@
+{
+  "name": "todo-list-web-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass -w src/sass/main.scss src/css/style.css"
+  },
+  "author": "Tyrus Berggren",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

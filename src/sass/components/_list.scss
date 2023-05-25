@@ -1,0 +1,63 @@
+.list {
+  list-style: none;
+  padding: 2rem;
+
+  &__item {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 4.6rem;
+  }
+
+  &__form {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__check {
+    display: none;
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__btn-done {
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+    border: 2px solid $color-gray-light-3;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+
+  &__btn-delete {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    height: 3rem;
+    width: 3rem;
+    margin-left: auto;
+    border-radius: 50%;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+
+  &__btn-delete:hover {
+    background-color: $color-gray-light-3;
+  }
+
+  &__btn-done:hover {
+    background-color: $color-secondary;
+  }
+
+  &__text {
+    cursor: pointer;
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,118 @@
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, #3730a3, #581c87);
+  padding: 2.4rem;
+  font-size: 1.6rem; }
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  background-color: #fafaf9;
+  padding: 2.4rem 3.6rem;
+  border-radius: 1rem; }
+
+*,
+*::after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  color: #374151; }
+
+.add-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+  margin-bottom: 6.4rem; }
+  .add-list__title {
+    font-size: 3.6rem;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center; }
+  .add-list__form {
+    display: flex; }
+  .add-list__input {
+    flex-grow: 1;
+    padding: 1.8rem;
+    border-radius: 999rem;
+    border: none;
+    background-color: #e7e5e4;
+    color: #374151;
+    font-family: inherit;
+    font-size: 1.6rem;
+    transition: all 0.2s;
+    transform: scaleX(0.95); }
+    .add-list__input:focus {
+      transform: scaleX(1);
+      box-shadow: inset 0 0 0 2px #ff643c;
+      outline: none; }
+  .add-list__submit {
+    border: none;
+    background-color: #ff643c;
+    padding: 1.8rem 4.6rem;
+    border-radius: 999rem;
+    font-family: inherit;
+    font-size: 2.4rem;
+    line-height: 1;
+    color: #fafaf9;
+    font-weight: 600;
+    transition: all 0.2s;
+    margin-left: -10rem;
+    z-index: 1; }
+    .add-list__submit:hover {
+      cursor: pointer;
+      padding: 1.8rem 6.4rem;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.075); }
+
+.list {
+  list-style: none;
+  padding: 2rem; }
+  .list__item {
+    display: flex;
+    gap: 3rem;
+    align-items: center; }
+  .list__item:not(:last-child) {
+    margin-bottom: 4.6rem; }
+  .list__form {
+    width: 3rem;
+    height: 3rem; }
+  .list__check {
+    display: none; }
+  .list__label {
+    position: relative; }
+  .list__btn-done {
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+    border: 2px solid #d6d3d1;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all 0.2s;
+    flex-shrink: 0; }
+  .list__btn-delete {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    height: 3rem;
+    width: 3rem;
+    margin-left: auto;
+    border-radius: 50%;
+    transition: all 0.2s;
+    flex-shrink: 0; }
+  .list__btn-delete:hover {
+    background-color: #d6d3d1; }
+  .list__btn-done:hover {
+    background-color: #ff643c; }
+  .list__text {
+    cursor: pointer;
+    font-size: 1.8rem; }

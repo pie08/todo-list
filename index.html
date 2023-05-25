@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script type="module" defer src="./src/js/controller.js"></script>
+
+    <title>To-Do List 📃</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="add-list">
+        <h1 class="add-list__title">To-Do List 📃</h1>
+        <form action="" class="add-list__form">
+          <input type="text" class="add-list__input" />
+          <button class="add-list__submit">Add</button>
+        </form>
+      </div>
+      <ul class="list">
+        <li data-index="0" class="list__item">
+          <button data="done" class="list__btn-done"></button>
+          <p class="list__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+            reprehenderit.
+          </p>
+          <button data="delete" class="list__btn-delete">X</button>
+        </li>
+        <li data-index="1" class="list__item">
+          <button class="list__btn-done"></button>
+          <p class="list__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+            reprehenderit.
+          </p>
+          <button class="list__btn-delete">X</button>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
