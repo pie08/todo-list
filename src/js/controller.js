@@ -4,11 +4,17 @@ import listView from "./listView.js";
 
 const controlAddNewTask = function (taskStr) {
   model.addNewTask(taskStr);
-  console.log(model.state);
+  listView.render(model.state.tasks);
+};
+
+const controlDeleteTask = function (itemIndex) {
+  model.deleteTask(itemIndex);
+  listView.render(model.state.tasks);
 };
 
 const init = function () {
   formView.addHandlerOnSubmit(controlAddNewTask);
   listView.addHandlerMarkDone();
+  listView.addHandlerDelete(controlDeleteTask);
 };
 init();

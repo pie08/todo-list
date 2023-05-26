@@ -6,15 +6,63 @@ class ListView {
   constructor() {
     this._markDone;
     this._deleteItem;
+    this._generateMarkup;
+    this._clear;
+  }
+
+  // data is array of tasks
+  render(data) {
+    this._data = data;
+    const markup = this._generateMarkup();
+    console.log(markup);
+    this._clear();
+    this._parentElement.insertAdjacentHTML("beforeend", markup);
+    // document.querySelectorAll(".list__item").forEach((el) => {
+    //   el.classList.remove("fall-from-top");
+    // });
+  }
+
+  _generateMarkup() {
+    return this._data
+      .map(
+        (text, i) => `
+        <li data-index="${i}" class="list__item ${
+          i === this._data.length - 1 ? "fall-from-top" : ""
+        }">
+          <button data="done" class="list__btn-done"></button>
+          <p class="list__text">
+            ${text}
+          </p>
+          <button data="delete" class="list__btn-delete">X</button>
+        </li>
+    `
+      )
+      .join("");
+  }
+
+  _clear() {
+    this._parentElement.innerHTML = "";
   }
 
   addHandlerMarkDone() {
     this._parentElement.addEventListener("click", (e) => {
       // e.preventDefault();
-      const btn = e.target.closest(".list__btn-done");
-      const itemIndex = e.target.closest(".list__item").dataset.index;
-      if (!btn) return;
+      if (e.target.closest(".list__btn-delete") !== null) return;
+
+      const item = e.target.closest(".list__item");
+      const itemIndex = item.dataset.index;
+      if (!item) return;
       this._markDone(itemIndex);
+    });
+  }
+
+  addHandlerDelete(handler) {
+    this._parentElement.addEventListener("click", (e) => {
+      // e.preventDefault();
+      const item = e.target.closest(".list__btn-delete");
+      if (!item) return;
+      const itemIndex = item.closest(".list__item").dataset.index;
+      handler(itemIndex);
     });
   }
 

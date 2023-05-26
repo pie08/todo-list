@@ -3,6 +3,7 @@
   padding: 2rem;
 
   &__item {
+    cursor: pointer;
     display: flex;
     gap: 3rem;
     align-items: center;
@@ -36,6 +37,14 @@
     flex-shrink: 0;
   }
 
+  &__btn-done:hover {
+    background-color: rgba($color-secondary, 0.2);
+  }
+
+  .marker--done &__btn-done {
+    background-color: rgba($color-secondary, 0.75);
+  }
+
   &__btn-delete {
     cursor: pointer;
     border: none;
@@ -52,12 +61,26 @@
     background-color: $color-gray-light-3;
   }
 
-  &__btn-done:hover {
-    background-color: $color-secondary;
+  &__text {
+    position: relative;
+    font-size: 1.8rem;
+    flex-grow: 1;
+    line-height: 1;
   }
 
-  &__text {
-    cursor: pointer;
-    font-size: 1.8rem;
+  &__text:hover {
+    color: $color-gray-light-4;
+    text-decoration: line-through;
+  }
+
+  .marker--done &__text {
+    color: transparent;
+    text-shadow: 0 0 1px $color-gray-light-4;
+    text-decoration: line-through;
+  }
+
+  .marker--done &__text-line {
+    left: 0;
+    width: 100%;
   }
 }

@@ -1,0 +1,15 @@
+@keyframes fallFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+.fall-from-top {
+  animation: 1s fallFromTop;
+}

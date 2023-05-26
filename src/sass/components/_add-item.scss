@@ -14,6 +14,10 @@
   &__form {
     display: flex;
     // gap: 4.8rem;
+    @include respond(phone) {
+      flex-direction: column;
+      gap: 1.8rem;
+    }
   }
 
   &__input {
@@ -32,6 +36,14 @@
       transform: scaleX(1);
       box-shadow: inset 0 0 0 2px $color-secondary;
       outline: none;
+
+      @include respond(phone) {
+        transform: translateY(-3px);
+      }
+    }
+
+    @include respond(phone) {
+      transform: scale(1);
     }
   }
 
@@ -54,6 +66,15 @@
       // transform: translateY(-0.3rem) scale(1.05);
       padding: 1.8rem 6.4rem;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.075);
+
+      @include respond(phone) {
+        padding: 1.8rem 4.6rem;
+      }
+    }
+
+    @include respond(phone) {
+      margin: 0;
+      align-self: center;
     }
   }
 }
