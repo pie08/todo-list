@@ -1,4 +1,4 @@
-@keyframes fallFromTop {
+@keyframes animation-fall-from-top {
   0% {
     opacity: 0;
     transform: translateY(-5rem); }
@@ -6,8 +6,29 @@
     opacity: 100%;
     transform: translateY(0); } }
 
+@keyframes animation-move-left {
+  0% {
+    transform: translateX(0); }
+  25% {
+    transform: translateX(10%); }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%); } }
+
+@keyframes animation-fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .fall-from-top {
-  animation: 1s fallFromTop; }
+  animation: 1s animation-fall-from-top; }
+
+.move-left {
+  animation: 0.8s animation-move-left; }
+
+.fade-in {
+  animation: 0.3s animation-fade-in; }
 
 body {
   min-height: 100vh;
@@ -78,7 +99,7 @@ body {
     background-color: #e7e5e4;
     color: #374151;
     font-family: inherit;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     transition: all 0.2s;
     transform: scaleX(0.95); }
     .add-list__input:focus {

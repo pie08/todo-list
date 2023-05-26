@@ -23,6 +23,12 @@ class ListView {
   }
 
   _generateMarkup() {
+    if (this._data.length === -0)
+      return `
+      <li class="no-tasks fade-in">
+        <p><span>:(</span> Looks like you don't have any tasks yet!</p>
+      </li>`;
+
     return this._data
       .map(
         (text, i) => `
@@ -61,8 +67,12 @@ class ListView {
       // e.preventDefault();
       const item = e.target.closest(".list__btn-delete");
       if (!item) return;
-      const itemIndex = item.closest(".list__item").dataset.index;
-      handler(itemIndex);
+      const itemEl = item.closest(".list__item");
+      const itemIndex = itemEl.dataset.index;
+      itemEl.classList.add("move-left");
+      setTimeout(() => {
+        handler(itemIndex);
+      }, 500);
     });
   }
 

@@ -1,5 +1,11 @@
 export const state = {
-  tasks: [],
+  tasks: [
+    "go to the store",
+    "get milk",
+    "if they have eggs",
+    "get a dozen",
+    "🍞🍞🍞🍞🍞🍞🍞🍞🍞🍞🍞🍞",
+  ],
 };
 
 export const addNewTask = function (text) {

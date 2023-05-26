@@ -1,4 +1,4 @@
-@keyframes fallFromTop {
+@keyframes animation-fall-from-top {
   0% {
     opacity: 0;
     transform: translateY(-5rem);
@@ -10,6 +10,38 @@
   }
 }
 
+@keyframes animation-move-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animation-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .fall-from-top {
-  animation: 1s fallFromTop;
+  animation: 1s animation-fall-from-top;
+}
+
+.move-left {
+  animation: 0.8s animation-move-left;
+}
+
+.fade-in {
+  animation: 0.3s animation-fade-in;
 }

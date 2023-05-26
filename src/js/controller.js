@@ -13,6 +13,7 @@ const controlDeleteTask = function (itemIndex) {
 };
 
 const init = function () {
+  listView.render(model.state.tasks);
   formView.addHandlerOnSubmit(controlAddNewTask);
   listView.addHandlerMarkDone();
   listView.addHandlerDelete(controlDeleteTask);
